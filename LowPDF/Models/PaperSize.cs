@@ -1,6 +1,4 @@
-﻿namespace LowPDF;
-
-public class PaperSize
+﻿public class PaperSize
 {
     public int WidthMM { get; private set; }
     public int HeightMM { get; private set; }
@@ -14,8 +12,8 @@ public class PaperSize
     {
         WidthMM = widthMM;
         HeightMM = heightMM;
-        WidthPoints = (int)Math.Round((widthMM / MmToInch) * PointsPerInch);
-        HeightPoints = (int)Math.Round((heightMM / MmToInch) * PointsPerInch);
+        WidthPoints = (int)Math.Round(widthMM / MmToInch * PointsPerInch);
+        HeightPoints = (int)Math.Round(heightMM / MmToInch * PointsPerInch);
     }
 
     // Standard paper sizes
